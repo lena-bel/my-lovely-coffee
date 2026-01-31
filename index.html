@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Lovely Coffee</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+</head>
+
+
+
+<body>
+    <nav>
+        <a href="#" class="logo">My Lovely Coffee</a>
+        <div class="nav-links">
+            <ul class="">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#visit-us">Visit Us</a></li>
+                <button>Contact Us</button>
+            </ul>
+            <a href="" class="menu"><i class="fa-solid fa-bars"></i> </a>
+        </div>
+    </nav>
+    <main>
+        <section id="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="icon-circle">
+                <i class="fa-solid fa-mug-hot"></i>
+            </div>
+            <div class="hero-content">
+                <h1>Taste the Art of Coffee</h1>
+                <p>Welcome to My lovely Coffee, Lyon's speciality coffee experience with artisanal brunch</p>
+                <div class="buttons">
+                    <button class="primary-btn">View Our Menu</button>
+                <button class="secondary-ish-btn">Visit Us</button>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <span>↓</span>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="story">
+                <h2>Our Story</h2>
+                <p>La Boîte à Café was born from a simple passion: bringing exceptional coffee experiences to the heart
+                    of Lyon. Since opening our doors, we've been dedicated to creating a welcoming space where coffee
+                    lovers can discover carefully crafted beverages and delicious brunch options. </p>
+
+                    <p>Our philosophy is simple — quality over quantity. We work directly with coffee farmers to ensure
+                    ethical sourcing and the freshest beans possible. Every cup tells a story of dedication, from bean
+                    to cup. </p>
+
+                    <p>Whether you're looking for your morning espresso, a peaceful workspace, or a cozy brunch with
+                    friends, La Boîte à Café is your home away from home.</p>
+            </div>
+            <div class="images">
+                <div class="item item1">
+                    <img src="./images/images/about-1.jpeg" alt="cafe">
+                </div>
+                <div class="item item2">
+                    <img src="./images/images/about-2.jpeg" alt="cafe">
+                </div>
+                <div class="item item3">
+                    <img src="./images/images/about-3.jpeg" alt="cafe">
+                </div>
+                <div class="item item4">
+                    <img src="./images/images/about-4.jpeg" alt="cafe">
+                </div>
+            </div>
+            <div class="more-info">
+                <div class="card">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <h3>Premium beans</h3>
+                    <p>We source the finest specialty coffee beans from ethical, sustainable farms around the world</p>
+                </div>
+                <div class="card">
+                    <div class="icon-circle">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <h3>Crafted with Care</h3>
+                    <p>Every cup is prepared by our skilled baristas who are passionate about coffee excellence</p>
+                </div>
+                <div class="card">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3>Award-Winning</h3>
+                    <p>Recognized as one of Lyon's best specialty coffee spots by local food critics</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <div class="text">
+                <h2>Our Menu</h2>
+                <p>Discover our carefully curated selection of specialty coffees, fresh pastries, and delicious brunch
+                    options</p>
+            </div>
+            <div class="menu">
+                <div class="menu-buttons">
+                    <button class="buttons tab-link active" data-tab="coffees">Coffees</button>
+                    <button class="buttons tab-link" data-tab="pastries">Pastries</button>
+                    <button class="buttons tab-link" data-tab="brunch">Brunch</button>
+                    <button class="buttons tab-link" data-tab="drinks">Drinks</button>
+                </div>
+                <div class="menu-content">
+                    <div class="coffee-menu tab-content active" id="coffees">
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Espresso</h3>
+                                <p class="price">€2.50</p>
+                            </div>
+                            <p class="name">Classic Italian espresso</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Double Espresso</h3>
+                                <p class="price">€3.50</p>
+                            </div>
+                            <p class="name">Double shot for extra energy</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Americano</h3>
+                                <p class="price">€3.00</p>
+                            </div>
+                            <p class="name">Espresso with hot water</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Cappucino</h3>
+                                <p class="price">€3.80</p>
+                            </div>
+                            <p class="name">Espresso with steammed milk foam</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Latte</h3>
+                                <p class="price">€4.00</p>
+                            </div>
+                            <p class="name">Smooth espresso with steamed milk</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Flat White</h3>
+                                <p class="price">€4.20</p>
+                            </div>
+                            <p class="name">Velvety microfoam with expresso </p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Cold Brew</h3>
+                                <p class="price">€4.50</p>
+                            </div>
+                            <p class="name">Smooth cold-steeped coffee</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Filtered Coffee</h3>
+                                <p class="price">€3.50</p>
+                            </div>
+                            <p class="name">Single-origin pour over</p>
+                        </div>
+                    </div>
+
+                    <div class="pastries-menu tab-content" id="pastries">
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Croissant au Beurre</h3>
+                                <p class="price">€2.20</p>
+                            </div>
+                            <p class="name">Traditional French Butter croissant</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Pain au chocolat</h3>
+                                <p class="price">€2.50</p>
+                            </div>
+                            <p class="name">Flaky pastry with dark chocolate</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Almond croissant</h3>
+                                <p class="price">€3.20</p>
+                            </div>
+                            <p class="name">Fielled with almond cream</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Cinnamon Roll</h3>
+                                <p class="price">€3.50</p>
+                            </div>
+                            <p class="name">Homemade with cream cheese frosting</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Muffin du Jour</h3>
+                                <p class="price">€2.80</p>
+                            </div>
+                            <p class="name">Fresh daily selection</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Scone</h3>
+                                <p class="price">€3.00</p>
+                            </div>
+                            <p class="name">With jam and clotted cream </p>
+                        </div>
+                    </div>
+
+                    <div class="brunch-menu tab-content" id="brunch">
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Avocado Toast</h3>
+                                <p class="price">€8.50</p>
+                            </div>
+                            <p class="name">Sourdough, avocado, poached egg, seeds</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>French Toast</h3>
+                                <p class="price">€9.00</p>
+                            </div>
+                            <p class="name">Brioche, seasonal fruits, maple syrup</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Breakfast Bowl</h3>
+                                <p class="price">€7.50</p>
+                            </div>
+                            <p class="name">Granola, yogurt, fresh fruits, honey</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Croque Monsieur</h3>
+                                <p class="price">€8.00</p>
+                            </div>
+                            <p class="name">Classic ham and cheese sandwich</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Veggie Bagel</h3>
+                                <p class="price">€7.00</p>
+                            </div>
+                            <p class="name">Cream cheese, vegetables, herbes</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Tartine Saumon</h3>
+                                <p class="price">€10.50</p>
+                            </div>
+                            <p class="name">Smoked salmon on sourdough </p>
+                        </div>
+                    </div>
+
+                    <div class="drinks-menu tab-content" id="drinks">
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Fresh Orange Juice</h3>
+                                <p class="price">€4.00</p>
+                            </div>
+                            <p class="name">Pressed daily</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Green Smoothie</h3>
+                                <p class="price">€5.50</p>
+                            </div>
+                            <p class="name">Spinach, banana, apple, ginger</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Iced Tea</h3>
+                                <p class="price">€3.50</p>
+                            </div>
+                            <p class="name">Selection of flavors</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Hot Chocolate</h3>
+                                <p class="price">€4.20</p>
+                            </div>
+                            <p class="name">Rich Belgian chocolate</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h3>Chai Latte</h3>
+                                <p class="price">€4.00</p>
+                            </div>
+                            <p class="name">Spiced tea with steamed milk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Experience the warmth and charm of La Boîte à Café through our collection</p>
+            <div class="gallery">
+                <div>
+                    <img src="./images/images/pexels-photo-19825169.jpeg" alt="my lovely coffee">
+                </div>
+                <div>
+                    <img src="./images/images/pexels-photo-24838082.jpeg" alt="my lovely coffee">
+                </div>
+                <div>
+                    <img src="./images/images/pexels-photo-302899.jpeg" alt="my lovely coffee">
+                </div>
+                <div>
+                    <img src="./images/images/pexels-photo-35592981.jpeg" alt="my lovely coffee">
+                </div>
+                <div>
+                    <img src="./images/images/pexels-photo-35593769.jpeg" alt="my lovely coffee">
+                </div>
+                <div>
+                    <img src="./images/images/pexels-photo-4828368.jpeg" alt="my lovely coffee">
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <h2>What Our Customers Say</h2>
+            <p>Join hundreds of satisfied coffee lovers who make La Boîte à Café their daily ritual</p>
+            <div class="reviews">
+                <div class="card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"The best coffee in Lyon! The atmosphere is so cozy and welcoming. I come here every morning."
+                    </p>
+                    <p class="name"><strong>Sophie Martin</strong></p>
+                </div>
+                <div class="card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"The best coffee in Lyon! The atmosphere is so cozy and welcoming. I come here every morning."
+                    </p>
+                    <p class="name"><strong>Sophie Martin</strong></p>
+                </div>
+                <div class="card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"The best coffee in Lyon! The atmosphere is so cozy and welcoming. I come here every morning."
+                    </p>
+                    <p class="name"><strong>Sophie Martin</strong></p>
+                </div>
+                <div class="card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"The best coffee in Lyon! The atmosphere is so cozy and welcoming. I come here every morning."
+                    </p>
+                    <p class="name"><strong>Sophie Martin</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="visit-us">
+            <h2>Visit Us</h2>
+            <p>We're located in the heart of Lyon. Come by and experience specialty coffee at its finest</p>
+            <div class="card">
+                <div class="card-title">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p><strong>Location</strong></p>
+                </div>
+                <address>78 rue du Parc 69000 LYON</address>
+            </div>
+            <div class="card">
+                <div class="card-title">
+                    <i class="fa-solid fa-clock"></i>
+                    <p><strong>Opening Hours</strong></p>
+                </div>
+                <p>Monday-Friday: 07:30 - 19:00</p>
+                <p>Saturday-Sunday: 08:00 - 18:00</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <i class="fa-solid fa-clock"></i>
+                    <p><strong>Contact</strong></p>
+                </div>
+                <p>Phone: +33 X XX XX XX XX</p>
+                <p>Email: <a href="mailto:contact@mylovely-cafe.com">contact@mylovely-cafe.com</a></p>
+            </div>
+            <div id="map"></div>
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+        </section>
+
+        <section id="contact-us">
+            <div class="get-in-touch">
+                <h2>Get In Touch</h2>
+                <p>Have questions or want to book a table? We'd love to hear from you</p>
+            </div>
+            <div class="message-form">
+                <div class="message">
+                    <h3>Send us a message</h3>
+                    <p>Fill out the form and we'll respond within 24 hours</p>
+                </div>
+                <form action="">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="Email">Email</label>
+                        <input type="email">
+                    </div>
+                    <div>
+                        <label for="subject">Subject</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message"></textarea>
+                    </div>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-send mr-2" aria-hidden="true" x-file-name="Contact" x-line-number="115"
+                            x-component="Send" x-id="Contact_115" x-dynamic="false">
+                            <path
+                                d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+                            </path>
+                            <path d="m21.854 2.147-10.94 10.939"></path>
+                        </svg>
+                        <strong>Send Message</strong>
+                    </button>
+                </form>
+            </div>
+            <div class="newsletter">
+                <h3><i class="fa-regular fa-envelope"></i> <strong>Newsletter</strong></h3>
+                <p>Subscribe to receive updates on new menu items, special events, and exclusive offers</p>
+                <form action="">
+                    <input type="email" name="email" id="email" placeholder="Enter your email address">
+                    <button>Subscribe</button>
+                </form>
+            </div>
+            <div class="book-a-table">
+                <h3>Book a Table</h3>
+                <p>Planning a special occasion or just want to ensure you get a seat? Give us a call and we'll reserve a
+                    table for you. </p>
+                <button>Call to Book</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h2 class="logo"><i class="fa-solid fa-mug-hot"></i> My Lovely Coffee</h2>
+            <p>Lyon's special coffee experience, crafted with passion since day one.</p>
+        </div>
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <div class="links">
+                <a href="">About Us</a>
+                <a href="">Our Menu</a>
+                <a href="">Gallery</a>
+                <a href="">Visit Us</a>
+            </div>
+        </div>
+        <div class="opening-hours">
+            <h2>Opening Hours</h2>
+            <p>Mon - Fri: 07:30 - 19:00</p>
+            <p>Sat - Sun: 08:00 - 18:00</p>
+        </div>
+        <div class="connect-with-us">
+            <h2>Connect With Us</h2>
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="github">
+            <p class="owner">© 2026 Lena Belise MUTIMA. All rights reserved.</p>
+            <p class="github-anchor"><a href="https://github.com/lena-bel" target="_blank" >My github</a></p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
